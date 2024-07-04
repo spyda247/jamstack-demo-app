@@ -1,9 +1,11 @@
+import { getData } from './functions/getData.js';
+
 const btn = document.getElementById('fetch-data-btn');
 
 const container = document.getElementById('data-container');
 
 btn.addEventListener('click', async () => {
-  const response = await fetch('./netlify/functions/getData');
+  const response = await getData();
   const data = await response.json();
 
   // renderData function
